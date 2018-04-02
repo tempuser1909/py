@@ -17,6 +17,9 @@ def writeToFile(data, filename, mode):
 	f.close()
 	
 def requestURL(filenostr):
+	# eg for lecturerEmail --> <...>@ntu.edu.sg
+	# lecturerEmail = ''
+	# input = 'https://presentur.ntu.edu.sg/search/search.asp?kk=&ka='+lecturerEmail+'&kc=any%20company&km=&ug=&type=0&page=1&page_live=1&search_type='
 	input = 'http://presentur.ntu.edu.sg/podcast/rss/rss'+ filenostr +'_2.xml'
 	data = urllib2.urlopen(input).read()
 	return data
